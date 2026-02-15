@@ -77,7 +77,7 @@ This automation manages my comprehensive DevOps learning journey that includes:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/trello-automation.git
+   git clone https://github.com/OmarChouchane/trello-automation.git
    cd trello-automation
    ```
 
@@ -229,7 +229,7 @@ I'm on a journey to master DevOps engineering, and I believe in **automating rep
 
 If this helped you organize your learning path, give it a ⭐️!
 
-**Connect with me on LinkedIn:** [Your LinkedIn Profile]
+**Connect with me on LinkedIn:** [Linkedin](https://www.linkedin.com/in/omar-chouchane/)
 
 ---
 
