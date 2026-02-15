@@ -1,0 +1,189 @@
+{
+  "courses": [
+    {
+      "id": "terraform_basics",
+      "name": "Terraform Basics Training Course",
+      "desc": "Learn Terraform fundamentals: HCL syntax, providers, resources, variables, state management, workspaces, and modules.",
+      "list": "To Learn",
+      "checklist": [
+        "Install Terraform & configure AWS provider",
+        "Create, update, and destroy resources",
+        "Learn variables, outputs, and locals",
+        "Practice Terraform state commands",
+        "Understand workspaces and modules"
+      ]
+    },
+    {
+      "id": "terraform_cert_prep",
+      "name": "Terraform Associate Certification Prep",
+      "desc": "Prepare for HashiCorp Terraform Associate exam with hands-on labs and MCQs.",
+      "list": "To Learn",
+      "checklist": [
+        "Review Infrastructure as Code concepts",
+        "Practice Terraform commands & functions",
+        "Use modules and remote state in S3",
+        "Solve practice challenges",
+        "Take sample exams"
+      ]
+    },
+    {
+      "id": "kubernetes_basics",
+      "name": "Kubernetes Basics & Hands-on",
+      "desc": "Learn Kubernetes core concepts: pods, deployments, services, configmaps, secrets, volumes, and basic cluster operations.",
+      "list": "To Learn",
+      "checklist": [
+        "Understand Kubernetes architecture",
+        "Deploy pods and deployments",
+        "Expose applications with services",
+        "Use ConfigMaps and Secrets",
+        "Practice scaling and rolling updates"
+      ]
+    },
+    {
+      "id": "ckad",
+      "name": "Certified Kubernetes Application Developer (CKAD)",
+      "desc": "Prepare for CKAD certification: focus on application deployment, configuration, observability, and troubleshooting on Kubernetes.",
+      "list": "To Learn",
+      "checklist": [
+        "Deploy cloud-native applications",
+        "Use ConfigMaps, Secrets, and Volumes",
+        "Implement health checks and probes",
+        "Use labels, selectors, and namespaces",
+        "Practice with hands-on labs"
+      ]
+    },
+    {
+      "id": "helm",
+      "name": "Helm for Beginners",
+      "desc": "Learn Helm: Kubernetes package manager for templating, managing, and deploying applications efficiently.",
+      "list": "To Learn",
+      "checklist": [
+        "Install Helm and understand charts",
+        "Package applications using Helm charts",
+        "Deploy applications with Helm",
+        "Manage releases and updates",
+        "Practice dependency management"
+      ]
+    },
+    {
+      "id": "github_actions",
+      "name": "GitHub Actions Certification",
+      "desc": "Learn GitHub Actions to automate CI/CD pipelines: workflow triggers, runners, jobs, steps, custom actions, and security.",
+      "list": "To Learn",
+      "checklist": [
+        "Understand GitHub Actions workflow syntax",
+        "Create CI/CD pipelines for projects",
+        "Integrate testing and deployment stages",
+        "Use reusable workflows and custom actions",
+        "Implement security best practices"
+      ]
+    },
+    {
+      "id": "gitops_argocd",
+      "name": "GitOps with ArgoCD",
+      "desc": "Learn GitOps methodology and use ArgoCD to manage Kubernetes deployments declaratively from Git.",
+      "list": "To Learn",
+      "checklist": [
+        "Understand GitOps principles",
+        "Deploy applications with ArgoCD",
+        "Configure sync and health checks",
+        "Manage secrets and RBAC",
+        "Set up monitoring and notifications"
+      ]
+    },
+    {
+      "id": "prometheus_pca",
+      "name": "Prep Course - Prometheus Certified Associate (PCA)",
+      "desc": "Learn Prometheus for monitoring cloud-native applications and Kubernetes clusters, and prepare for PCA exam.",
+      "list": "To Learn",
+      "checklist": [
+        "Install and configure Prometheus",
+        "Collect metrics and create dashboards",
+        "Use PromQL for querying metrics",
+        "Configure AlertManager for notifications",
+        "Monitor Kubernetes applications"
+      ]
+    },
+    {
+      "id": "istio",
+      "name": "Istio Service Mesh",
+      "desc": "Learn Istio to manage service-to-service communication, observability, traffic management, and security in microservices architecture.",
+      "list": "To Learn",
+      "checklist": [
+        "Understand service mesh concepts",
+        "Deploy Istio on Kubernetes",
+        "Configure gateways, routing, and timeouts",
+        "Set up monitoring with Prometheus and Grafana",
+        "Implement distributed tracing with Jaeger"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "AWS 3-Tier Architecture With Terraform",
+      "desc": "Hands-on project: Deploy a secure 3-tier architecture on AWS using Terraform. Covers VPC, subnets, EC2, RDS, ALB, and Auto Scaling.",
+      "list": "To Learn",
+      "depends_on": ["terraform_basics"],
+      "checklist": [
+        "Create custom VPC with public/private subnets",
+        "Configure route tables, IGW, and NAT",
+        "Deploy EC2 instances and RDS",
+        "Set up Application Load Balancer",
+        "Implement Auto Scaling Group",
+        "Document architecture and Terraform code"
+      ]
+    },
+    {
+      "name": "Host a Dynamic Web Application on AWS with Terraform",
+      "desc": "Advanced Terraform project: Deploy production-ready web app using Terraform. Learn S3 backend, DynamoDB state locking, Secrets Manager, ACM SSL, SNS, and ASG.",
+      "list": "To Learn",
+      "depends_on": [
+        "terraform_basics",
+        "terraform_cert_prep",
+        "AWS 3-Tier Architecture With Terraform"
+      ],
+      "checklist": [
+        "Configure Terraform backend and state locking",
+        "Deploy VPC, subnets, EC2, and RDS",
+        "Integrate Secrets Manager for credentials",
+        "Set up ALB and HTTPS using ACM SSL",
+        "Implement Auto Scaling and notifications",
+        "Validate deployment with custom domain"
+      ]
+    },
+    {
+      "name": "Production-Ready EKS Cluster Using Terraform",
+      "desc": "Project: Deploy secure AWS EKS cluster using Terraform with best practices, including Bastion host and networking configuration.",
+      "list": "To Learn",
+      "depends_on": [
+        "terraform_basics",
+        "kubernetes_basics",
+        "AWS 3-Tier Architecture With Terraform"
+      ],
+      "checklist": [
+        "Deploy VPC and subnets for EKS",
+        "Create EKS cluster with Terraform",
+        "Configure worker nodes and security groups",
+        "Set up Bastion host for secure access",
+        "Document infrastructure and Terraform code"
+      ]
+    },
+    {
+      "name": "AWS EKS Three-Tier Microservice Deployment with Prometheus & Grafana",
+      "desc": "Hands-on project: Deploy microservices on EKS using Terraform. Implement monitoring with Prometheus and Grafana.",
+      "list": "To Learn",
+      "depends_on": [
+        "Production-Ready EKS Cluster Using Terraform",
+        "prometheus_pca",
+        "ckad"
+      ],
+      "checklist": [
+        "Deploy EKS cluster and nodes",
+        "Deploy three-tier microservice applications",
+        "Set up Prometheus for monitoring",
+        "Configure Grafana dashboards",
+        "Test microservices and observability"
+      ]
+    }
+  ]
+}
